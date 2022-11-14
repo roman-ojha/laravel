@@ -70,5 +70,7 @@
                 -> application detail
             -> phpunit.xml
                 -> for unit test
+            -> composer.json
+                -> contain list of dependencies for the project
 
     */

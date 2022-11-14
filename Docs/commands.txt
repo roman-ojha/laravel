@@ -1,6 +1,18 @@
--> composer global require laravel/installer
-    => (install laravel globally)
--> laravel new <app_name>
-    => (create new laravel project)
--> php artisan serve
-    => (start laravel server)
+*) For Laravel:
+    -> composer global require laravel/installer
+        => (install laravel globally)
+    -> laravel new <app_name>
+        => (create new laravel project)
+    -> php artisan serve
+        => (start laravel server)
+
+
+*) Composer Command:
+    -> composer update <package_name> 
+        => (to update package using composer)
+    -> composer require <package_name> "^0.4"
+        => (to install specific version of package)
+    -> composer require <package_name>
+        => (to install package)
+    -> composer install
+        => (install all dependencies)
