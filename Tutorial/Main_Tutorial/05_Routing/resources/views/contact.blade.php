@@ -7,10 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>Welcome Page</h1> 
-
-   {{-- here we can see that we are able to go to another route by just passing route url into href attrubute --}}
-   <a href="/about">About</a>
-   <a href="/contact">Contact</a>
+    <h1>Contact Page</h1>
 </body>
 </html>
