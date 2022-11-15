@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- now here we can access that variable value like this -->
     {{ $name }}
 </body>
 </html>

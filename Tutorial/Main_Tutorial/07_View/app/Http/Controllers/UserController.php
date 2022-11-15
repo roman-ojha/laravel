@@ -6,18 +6,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    // to ue this controller we have to make a function
-    // we can create any kind of the function
-    // to call this function we have to create a route
     public function show($id)
     {
-        // $id : is the parameter that we get from url
-
-        // echo or return value will get show into the web page
-        // echo "Hello";
         return "Hello $id from Controller";
+    }
 
-        // No here we can do database connection or call View
-        // or we control all the functionality of the application
+    // here we will Call View from the controller and render it to specific route
+    public function loadUserView($username)
+    {
+        // now here we are loading 'user' view from this controller function
+        return view('users', ['username'=>$username]);
+        // also we can pass parameter to View that can be able to access by view blade
     }
 }
