@@ -1,18 +1,23 @@
 <?php
 
     /*
-        *) What is View:
-            -> We put complete HTML part in here
-            -> we use blade template engine for fast rendering
-        *) Make View
-            -> we can create view inside './resources/views'
-        *) Call View
-            -> and we can call it from routing './routes/web.php'
-            -> also we can call view from controller
-            -> we will use './app/Http/Controllers/UserControllers.php'
-        *) Pass Data in View
-            -> We can pass url parameter as data and get access by controller and then can pass it to View
-            -> also we can pass any kind of data from controller to View
-        *) Question?
-            1. Why we create Controller from Command line but not View
+        *) What is Component:
+            -> Peace of code that can be use multiple times
+            -> let's say we have header component that we don't have to write it again and again in every view in that case for every page we can use same header component
+        *) Make Component:
+            -> Create component using command line:
+                -> php artisan make:component <component_name>
+                -> php artisan make:component Header
+            -> it create:
+                -> one blade file on './resources/views/components/'
+                    -> to write html code
+                -> one php file on './app/View/components/'
+                    -> to write dynamic code
+        *) Use Component:
+            -> so we had create the 'header' component now we will use that header component inside 'users.blade.php' & 'about.blade.php'
+        *) Pass Data in Component:
+            -> first we will pass data from another view page or component as attribute
+            -> then we will access that through
+        *) Interview Question:
+            -> 1. Can we use component into route?
     */

@@ -7,6 +7,8 @@
     <title>About</title>
 </head>
 <body>
+    {{-- <x-<component_name>/> --}}
+    <x-header componentName="About"/>
     <h1>About Page</h1> 
 </body>
 </html>
