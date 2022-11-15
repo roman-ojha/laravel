@@ -11,7 +11,9 @@
         *) Get Form Data
             -> we will get the form data back to controller
         *) Uer Validation function
+            -> we will apply validation on controller function
         *) Show error message
+            -> and we can get the error to 'login.blade.php' if the validation through error
         *) Error with every field
         *) Interview Question
     */

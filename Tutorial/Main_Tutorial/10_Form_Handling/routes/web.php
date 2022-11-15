@@ -9,7 +9,6 @@ use App\Http\Controllers\UserController;
 Route::get('/login', function () {
     return view('login');
 });
-
 // now this route will get the post from data and pass it into the controller
 Route::post('/user', [UserController::class,'getPostData']);
 
