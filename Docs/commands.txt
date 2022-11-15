@@ -7,6 +7,8 @@
         => (start laravel server)
     -> php artisan make:controller UserController
         => (to create new controller inside project)
+    -> php artisan make:component <component_name>
+        => (to create new blade component)
 
 
 *) Composer Command:
