@@ -5,6 +5,8 @@
         => (create new laravel project)
     -> php artisan serve
         => (start laravel server)
+    -> php artisan make:controller UserController
+        => (to create new controller inside project)
 
 
 *) Composer Command:

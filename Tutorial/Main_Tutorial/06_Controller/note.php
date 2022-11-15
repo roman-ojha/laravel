@@ -1,21 +1,20 @@
 <?php
 
     /*
-        *) What is routing
-            -> to create url for the new page
-            -> in which url which page will open for that we have to do routing
-        *) How to make routing
-            -> web based routing is happing on './routing/web.php'
-            -> so we will write '<file_name>.blade.php' file inside 'views' which will get route to the 'web.php' file
-        *) What is Blade
-            -> blade is a laravel template engine
-        *) Pass data with routing
-            -> we can pass the data through routing as /{url} we will explain about this on './routes/web.php'
-            -> and we can pass the variable inside view as well
-        *) Anchor Tag
-            -> also we can go to another route from one view page
-            -> like ex: we have done it on 'views/welcome.blade.php'
-        *) Redirect
-            -> we can even redirect to another page if someone try to open one specific page
-            -> this example
+        *) What is Controller
+            -> Central Unit
+            -> Connect View, Model & Routing
+            -> When we have to access database we use 'Model' and take it to controller and after that we will pass that data into View
+            -> We call Controller from Routing
+            -> Controller Decide Which page to open on which routing
+        *) Make controller
+            -> Command to create new controller
+            -> php artisan make:controller UserController
+        *) Make function in controller
+            -> we will create function of controller in './app/Http/Controllers/userControllers.php'
+        *) Call controller from routing
+            -> to call controller function we have to create a route on 'web.php'
+        *) Passing Params with URL
+            -> we can even pass parameter with URL routing and can be able to access that params into controller
+            -> we will do that in 'web.php' route
     */
