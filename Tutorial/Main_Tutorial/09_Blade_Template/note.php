@@ -10,6 +10,12 @@
         *) Blade Template expression
         *) Conditions
         *) for and Foreach Loop
+        *) Include View in view
+        *) Php in Js
+        *) Csrf Token
             -> we will learn about these in 'users.blade.php' file
+        *) Header and Footer
         *) Interview Question
+            1. can we use php tab inside blade template?
+            2. what is the best way to add bootstrap or jquery into laravel
     */
