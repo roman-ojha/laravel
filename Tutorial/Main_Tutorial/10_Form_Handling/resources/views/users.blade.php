@@ -10,8 +10,6 @@
 
 <body>
     <x-header componentName="User" />
-    {{-- we can string writing php expression inside {{ }} --}}
-    {{-- we can also access the data that we pass from routing or contoller --}}
     <h1>Hello {{ $username }}</h1>
 
     {{-- php expression --}}
@@ -57,18 +55,13 @@
     ?>
 
     {{-- Include View inside View --}}
-    {{-- @include('<page_name>') --}}
     @include('inner');
 
     {{-- Csrf token --}}
-    {{-- we need Csrf token when we use forms so that soem thrid party can't be able to send the data to us --}}
-    {{-- we can also use Csrf to generate token --}}
     @csrf
-    {{-- it will create input element with token value --}}
     {{-- <input type="hidden" name="_token" value="eElvCQ4YdWslsctTSCMXNxUllyPE7d59uTmDWYeF"> --}}
 
     {{-- PHP in JS --}}
-    {{-- her we have to use '@json(<variable_name>)' --}}
     <script>
         var data = @json($username);
         console.log(data);

@@ -4,8 +4,14 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
 
-Route::get('/user/{id}', [UserController::class,'show']);
+// '/login' will render the 'login.blade.php' view page
+// then inside it we will create a form on POST method for that we will use '/user' route
+Route::get('/login', function () {
+    return view('login');
+});
 
+// now this route will get the post from data and pass it into the controller
+Route::post('/user', [UserController::class,'getPostData']);
 
 Route::get('/', function () {
     return view('welcome');
