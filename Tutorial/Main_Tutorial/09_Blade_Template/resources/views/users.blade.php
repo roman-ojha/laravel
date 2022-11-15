@@ -7,13 +7,51 @@
     <title>Document</title>
 </head>
 <body>
-    {{-- here we are adding 'header' component --}}
-    {{-- also we can pass to component the data as attrubute --}}
-    {{-- <x-<component_name>/> --}}
     <x-header componentName="User"/> 
-    {{-- we will access this value on '../../app/View/Components/Header.php' --}}
-    
-   <h1>User View</h1> 
-   <h1>Hello {{$username}}</h1>
+    {{-- we can string writing php expression inside {{ }} --}}
+    {{-- we can also access the data that we pass from routing or contoller --}}
+    <h1>Hello {{$username}}</h1>
+
+    {{-- php expression --}}
+    <h1>{{ 10 * 2 }}</h1>
+
+    {{-- php functions --}}
+    <h1>{{ count($friends) }}</h1>
+
+    {{-- if else condition --}}
+    @if($username == 'roman-ojha')
+        <h1> you are roman </h1> 
+    @elseif($username == 'razz')
+        <h1> you are razz </h1>
+    @else
+        <h1> you are unknown </h1> 
+        {{-- end if else --}}
+    @endif
+
+    {{-- Loops --}}
+    {{-- For loops: --}}
+    <h1>Friends:</h1>
+    <ol>
+    @for ($i = 0; $i < count($friends); $i++)
+        <li>{{ $friends[$i] }}</li>
+    @endfor
+    </ol>
+
+    {{-- For each --}}
+    <h1>Friends:</h1>
+    <ol>
+    @foreach($friends as $friend)
+        <li>{{ $friend }}</li>
+    @endforeach
+    </ol>
+
+    {{-- Using PHP Tab --}}
+    <?php
+        function a(){
+            echo "Hello";
+        }
+        a();
+    ?>
+
 </body>
 </html>

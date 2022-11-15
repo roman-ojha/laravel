@@ -14,9 +14,6 @@ class Header extends Component
     public $title = "";
     public function __construct($componentName)
     {
-        // now here we will get the pass data from view
-        // and we will assign that value to a property
-        // now we can access that value on 'header.blade.php' component
         $this->title = $componentName;
     }
 
