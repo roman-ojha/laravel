@@ -9,6 +9,10 @@
         => (to create new controller inside project)
     -> php artisan make:component <component_name>
         => (to create new blade component)
+    -> php artisan make:middleware <middleware_name>
+        => (to create new middleware)
+    -> php artisan make:model <model_name>
+        => (to create new model)
 
 
 *) Composer Command:
