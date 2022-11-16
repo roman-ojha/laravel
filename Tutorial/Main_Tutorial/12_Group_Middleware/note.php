@@ -2,7 +2,7 @@
 
     /*
         *) What is Group Middleware:
-            -> add middleware for some pages only
+            -> add middleware for some pages and routes
         *) Make Middleware:
             -> we will create 'groupCheckAge' middleware name
             -> php artisan make:middleware <middleware_name>
