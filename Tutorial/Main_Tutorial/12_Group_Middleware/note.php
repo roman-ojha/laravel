@@ -22,4 +22,5 @@
                 -> to check the middleware you can go to this url:
                     -> http://127.0.0.1:8000/user?age=19
         *) Question
+            1. can we apply multiple group middleware on same route?
     */
