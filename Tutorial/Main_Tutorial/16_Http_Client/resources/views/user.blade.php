@@ -9,7 +9,26 @@
 </head>
 
 <body>
-    <h1>User page</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last name</th>
+            <th>Avatar</th>
+        </tr>
+        @foreach ($users as $user)
+            <tr>
+                <td>{{ $user->id }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->first_name }}</td>
+                <td>{{ $user->last_name }}</td>
+                <td>
+                    <img src="{{ $user->avatar }}" alt="{{ $user->first_name . ' ' . $user->last_name }}" />
+                </td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 
 </html>

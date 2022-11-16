@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-use App\Models\Student;
+// include HTTP Client
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
-    public function index()
+    public function getUser()
     {
-        return DB::select("SELECT * FROM students");
-    }
+        // here we will request to the url with Http client using get method and then get response back
+        $response = Http::get('https://reqres.in/api/users?page=1');
+        // return $response;
 
-    public function getStudent()
-    {
-        return Student::all();
+        // we will now send the response data to 'user.blade.php' view where we will access the 'users' data
+        $data = json_decode($response);
+        return view('user', ["users"=>$data->data]);
     }
 }
