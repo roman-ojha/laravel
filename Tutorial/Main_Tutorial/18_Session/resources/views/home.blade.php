@@ -10,6 +10,7 @@
 
 <body>
     <h1>Home page</h1>
+    <a href="/login">LogIn</a>
 </body>
 
 </html>
