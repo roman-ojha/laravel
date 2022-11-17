@@ -4,19 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// include HTTP Client
 use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
-    public function getUser()
+    public function getMethod(Request $req)
     {
-        // here we will request to the url with Http client using get method and then get response back
-        $response = Http::get('https://reqres.in/api/users?page=1');
-        // return $response;
+        // To get the GET Method data we can use this:
+        return $req->input();
+    }
 
-        // we will now send the response data to 'user.blade.php' view where we will access the 'users' data
-        $data = json_decode($response);
-        return view('user', ["users"=>$data->data]);
+    // for post Method
+    public function postMethod(Request $req)
+    {
+        return $req->input();
+    }
+
+    public function putMethod(Request $req)
+    {
+        return $req->input();
+    }
+
+    public function deleteMethod(Request $req)
+    {
+        echo "Delete Method";
+        return $req->input();
     }
 }

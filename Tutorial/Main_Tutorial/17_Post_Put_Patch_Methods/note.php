@@ -7,7 +7,7 @@
                 1. GET
                     -> to get the data
                 2. POST
-                    -> to send the data
+                    -> to send & save the data
                 3. PUT
                     -> to update the data
                 4. HEAD
@@ -17,5 +17,7 @@
                 7. OPTIONS
         *) Make Html Form
         *) Route Method For Request
+            -> we had use 'user.blade.php', 'web.php' route & 'UserController.php' to see the example
         *) Question
+            -> can we handle all the method from one route in laravel?
     */
