@@ -9,12 +9,18 @@
 </head>
 
 <body>
-    <h1>User Login</h1>
-    <form action="/login" method="POST">
+    <h1>Add New Member</h1>
+    {{-- Getting Session Data --}}
+    @if (session('user'))
+        <h3>Data saved for{{ session('user') }}</h3>
+    @endif
+    <form action="/store" method="POST">
         @csrf
         <input type="text" name="user" placeholder="Username" />
         <br />
         <input type="password" name="password" placeholder="Password" />
+        <br />
+        <input type="email" name="email" placeholder="Email" />
         <br />
         <input type="submit" value="Login" />
     </form>

@@ -9,10 +9,6 @@
 </head>
 
 <body>
-    {{-- Reading session data --}}
-    <h1> Welcome {{ session('user') }}</h1>
-
-    <a href="/logout">Logout</a>
 </body>
 
 </html>
