@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\StoreController;
+use App\Http\Controllers\UploadController;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::view('store', 'store');
+// Route for view
+Route::view('upload', 'upload');
 
-Route::post('store', [StoreController::class,'storeUser']);
+// Route for Post Request to upload file
+Route::post('upload', [UploadController::class,"uploadFile"]);
