@@ -9,5 +9,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-// using '/students' route to render View by passing Model Data into Controller
+// using '/students' route to render View by passing Model Data using controller
 Route::get('students', [StudentController::class,'showStudents']);

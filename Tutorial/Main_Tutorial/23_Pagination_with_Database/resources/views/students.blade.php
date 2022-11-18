@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .w-5 {
+            display: none
+        }
+    </style>
 </head>
 
 <body>
@@ -28,6 +33,10 @@
             </tr>
         @endforeach
     </table>
+    <div>
+        {{-- we can use the default 'links()' to go to another page --}}
+        {{ $students->links() }}
+    </div>
 </body>
 
 </html>
