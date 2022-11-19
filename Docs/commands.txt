@@ -27,6 +27,10 @@
         => (to first remove all migrated table and again migrate all the table, means to refresh the table)
     -> php artisan migrate --path=/database/migrations/<filename>.php
         => (to migrate single file table)
+    -> php artisan make:seeder <seeder_name>
+        => (to create seeder file)
+    -> php artisan db:seed --class=<seeder_class_name>
+        => (to seed data into database)
 
 
 
