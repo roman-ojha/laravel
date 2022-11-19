@@ -23,6 +23,7 @@
             <th>Class</th>
             <th>Phone</th>
             <th>Operation</th>
+            <th>Edit</th>
         </tr>
         @foreach ($students as $student)
             <tr>
@@ -32,8 +33,10 @@
                 <td>{{ $student['sclass'] }}</td>
                 <td>{{ $student['sphone'] }}</td>
                 <td>
-                    {{-- Delete Button to delete the data --}}
                     <a href={{ 'delete/' . $student['sid'] }}>Delete</a>
+                </td>
+                <td>
+                    <a href={{ 'edit/' . $student['sid'] }}>Edit</a>
                 </td>
             </tr>
         @endforeach
