@@ -13,6 +13,21 @@
         => (to create new middleware)
     -> php artisan make:model <model_name>
         => (to create new model)
+    -> php artisan make:migration create_<table_name>_table
+        => (to create table using migration)
+    -> php artisan migrate
+        => (to migrate table)
+    -> php artisan migrate:reset
+        => (to remove all the migrated tables)
+    -> php artisan migrate:rollback
+        => (to remove last migrated tables)
+    -> php artisan migrate:rollback --step <number_of_table>
+        => (to rollback given number of table from the last migrated table)
+    -> php artisan migrate:refresh
+        => (to first remove all migrated table and again migrate all the table, means to refresh the table)
+    -> php artisan migrate --path=/database/migrations/<filename>.php
+        => (to migrate single file table)
+
 
 
 *) Composer Command:
