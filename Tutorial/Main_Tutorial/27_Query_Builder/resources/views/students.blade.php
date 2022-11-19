@@ -41,6 +41,9 @@
             </tr>
         @endforeach
     </table>
+    <h1>
+        <a href="/insert">Insert</a>
+    </h1>
 </body>
 
 </html>
