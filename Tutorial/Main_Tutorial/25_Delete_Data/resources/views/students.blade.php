@@ -15,13 +15,14 @@
 
 <body>
     <h1>Student List</h1>
-    <table>
+    <table border="1">
         <tr>
             <th>Id</th>
             <th>Name</th>
             <th>Address</th>
             <th>Class</th>
             <th>Phone</th>
+            <th>Operation</th>
         </tr>
         @foreach ($students as $student)
             <tr>
@@ -30,13 +31,13 @@
                 <td>{{ $student['saddress'] }}</td>
                 <td>{{ $student['sclass'] }}</td>
                 <td>{{ $student['sphone'] }}</td>
+                <td>
+                    {{-- Delete Button to delete the data --}}
+                    <a href={{ 'delete/' . $student['sid'] }}>Delete</a>
+                </td>
             </tr>
         @endforeach
     </table>
-    <div>
-        {{-- we can use the default 'links()' to go to another page --}}
-        {{ $students->links() }}
-    </div>
 </body>
 
 </html>

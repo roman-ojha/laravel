@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// using Model
 use App\Models\Student;
 
 class StudentController extends Controller
 {
     public function showStudents()
     {
-        $students = Student::paginate(2);
+        // $students = Student::paginate(2);
+        $students = Student::all();
 
         return view('students', ['students'=>$students]);
     }
@@ -20,7 +20,6 @@ class StudentController extends Controller
     {
         $data = $req->input();
 
-        // Insert data into database
         $student = new Student();
         $student->sname = $data['sname'];
         $student->saddress = $data['saddress'];
@@ -28,10 +27,19 @@ class StudentController extends Controller
         $student->sclass = 1;
         $student->save();
 
-        // NOTE: laravel say to have 'updated_at' column in table but we can by pass
-        // for that we have to go to 'Student.php' Model and write this:
-        // public $timestamps = false;
+        return redirect('/students');
+    }
 
+    // Creating Controller Function to delete Student Data
+    public function deleteStudent(Request $req, $id)
+    {
+        // will find base on id column
+        // $data = Student::find($id);
+        // delete data
+        // $data->data();
+
+        // but we want to find data base on sid
+        $data = Student::where('sid', '=', $id)->delete();
         return redirect('/students');
     }
 }

@@ -12,3 +12,6 @@ Route::get('/', function () {
 Route::get('students', [StudentController::class,'showStudents']);
 Route::view('insert', 'insert');
 Route::post('insert', [StudentController::class,'insertStudent']);
+
+// Route to delete the data
+Route::get('delete/{id}', [StudentController::class,'deleteStudent']);
