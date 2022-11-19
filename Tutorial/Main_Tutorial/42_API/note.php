@@ -20,4 +20,12 @@
                     -> http://localhost:8000/api/<api_route>
             *) Question
                 1. can we use REST API route on 'web.php' route, if we can, should we or not?
+
+        *) GET Method API
+            -> for that we will use Student Table from database
+            *) Make Controller
+            *) Make Model
+            *) Write Code for API
+            *) Test
+            *) Question
     */

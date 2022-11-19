@@ -1,2 +1,5 @@
-### Laravel API GET Method
+### Laravel API GET Method for test
+GET http://localhost:8000/api/test
+
+### API GET Method to get all student data
 GET http://localhost:8000/api/get

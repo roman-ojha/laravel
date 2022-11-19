@@ -10,5 +10,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Route for GET Method API for test
+Route::get('test', [APIController::class,'test']);
+
 // Route for GET Method API
 Route::get('get', [APIController::class,'getMethod']);
