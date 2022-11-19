@@ -1,6 +1,8 @@
 *) For Laravel:
     -> composer global require laravel/installer
         => (install laravel globally)
+    -> composer global remove laravel/installer 
+        => (remove laravel from global)
     -> laravel new <app_name>
         => (create new laravel project)
     -> php artisan serve

@@ -7,6 +7,7 @@
             -> can install using two way:
             1. Laravel Installer
                 -> composer global require laravel/installer
+                -> composer global remove laravel/installer (to remove laravel from global)
                 => create a new project:
                     -> laravel new <app_name>
             2. Using Composer
