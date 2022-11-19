@@ -9,4 +9,4 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/join', [StudentController::class,'joinOperation']);
+Route::get('students', [StudentController::class,'index']);
