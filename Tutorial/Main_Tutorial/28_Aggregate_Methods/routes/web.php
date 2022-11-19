@@ -3,15 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('students', [StudentController::class,'showStudents']);
-Route::view('insert', 'insert');
-Route::post('insert', [StudentController::class,'insertStudent']);
-Route::get('delete/{id}', [StudentController::class,'deleteStudent']);
-Route::get('edit/{id}', [StudentController::class,'getEditingStudent']);
-Route::post('edit', [StudentController::class,"editStudent"]);
+Route::get('/operations', [UserController::class,'operations']);
