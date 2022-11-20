@@ -14,11 +14,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('test', [APIController::class,'test']);
 
 // Route for GET Method API
-Route::get('get', [APIController::class,'getMethod']);
+Route::get('student', [APIController::class,'getMethod']);
 
 // Route for GET Method With Params
-Route::get('get/id/{id?}', [APIController::class,'getWithId']);
+Route::get('student/id/{id?}', [APIController::class,'getWithId']);
 // {id?} : if we will use '?' it means that not required
 
 // Route for POST Method
-Route::post('post/', [APIController::class,'postMethod']);
+Route::post('student/', [APIController::class,'postMethod']);
+
+// Route for PUT Method
+Route::put('student', [APIController::class,'putMethod']);

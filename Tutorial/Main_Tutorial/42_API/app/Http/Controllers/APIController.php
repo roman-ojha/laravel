@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
-use GuzzleHttp\Psr7\Response;
 
 class APIController extends Controller
 {
@@ -43,6 +42,20 @@ class APIController extends Controller
         $saved = $student->save();
         if ($saved) {
             return ["success"=>true,"msg"=>"Saved Data Into database"];
+        } else {
+            return ["success"=>false,"msg"=>"Some problem occur"];
+        }
+    }
+
+    public function putMethod(Request $req)
+    {
+        $body = json_decode($req->getContent());
+
+        $updatedRes = Student::where('sid', '=', $body->sid)->update(
+            ['sname'=>$body->sname,'saddress'=>$body->saddress,'sphone'=>$body->sphone,'sclass'=>$body->sclass]
+        );
+        if ($updatedRes) {
+            return ["success"=>true,"msg"=>"Updated Data Into database"];
         } else {
             return ["success"=>false,"msg"=>"Some problem occur"];
         }

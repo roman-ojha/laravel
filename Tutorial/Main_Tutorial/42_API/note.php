@@ -33,5 +33,7 @@
             *) Condition with route
             *) Apply Condition with result
 
-        *) Post Method API
+        *) POST Method API
+        *) PUT Method
+        *)
     */
