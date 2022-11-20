@@ -19,3 +19,6 @@ Route::get('get', [APIController::class,'getMethod']);
 // Route for GET Method With Params
 Route::get('get/id/{id?}', [APIController::class,'getWithId']);
 // {id?} : if we will use '?' it means that not required
+
+// Route for POST Method
+Route::post('post/', [APIController::class,'postMethod']);

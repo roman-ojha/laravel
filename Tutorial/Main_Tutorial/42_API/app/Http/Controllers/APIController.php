@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use GuzzleHttp\Psr7\Response;
 
 class APIController extends Controller
 {
@@ -26,5 +27,24 @@ class APIController extends Controller
             return Student::all();
         }
         return Student::where('sid', '=', $id)->get();
+    }
+
+    public function postMethod(Request $req)
+    {
+        // first we will get the body content
+        $body = json_decode($req->getContent());
+
+        // Saving new data into database
+        $student = new Student();
+        $student->sname = $body->sname;
+        $student->saddress = $body->saddress;
+        $student->sphone = $body->sphone;
+        $student->sclass = $body->sclass;
+        $saved = $student->save();
+        if ($saved) {
+            return ["success"=>true,"msg"=>"Saved Data Into database"];
+        } else {
+            return ["success"=>false,"msg"=>"Some problem occur"];
+        }
     }
 }

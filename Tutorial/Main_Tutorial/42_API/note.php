@@ -27,12 +27,11 @@
             *) Make Model
             *) Write Code for API
             *) Test
-            *) Question
 
         *) Get API with Params
             *) Pass params with Routing
             *) Condition with route
             *) Apply Condition with result
-            *) Other Options
-            *) Question
+
+        *) Post Method API
     */

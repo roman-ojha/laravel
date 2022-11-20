@@ -6,3 +6,14 @@ GET http://localhost:8000/api/get
 
 ### GET Method API to get student with id
 GET http://localhost:8000/api/get/id/10
+
+### POST Method API
+POST http://localhost:8000/api/post
+Content-Type: application/json
+
+{
+    "sname":"John",
+    "saddress":"canada",
+    "sphone":43211234,
+    "sclass":3
+}
