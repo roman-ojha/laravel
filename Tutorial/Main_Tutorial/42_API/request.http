@@ -3,3 +3,6 @@ GET http://localhost:8000/api/test
 
 ### API GET Method to get all student data
 GET http://localhost:8000/api/get
+
+### GET Method API to get student with id
+GET http://localhost:8000/api/get/id/10

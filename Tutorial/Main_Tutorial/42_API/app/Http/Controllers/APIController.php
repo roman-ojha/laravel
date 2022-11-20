@@ -18,4 +18,13 @@ class APIController extends Controller
     {
         return Student::all();
     }
+
+    public function getWithId($id = null)
+    {
+        // responding all the data if we didn't get the id, if we get it we will send the specific id
+        if ($id==null) {
+            return Student::all();
+        }
+        return Student::where('sid', '=', $id)->get();
+    }
 }
