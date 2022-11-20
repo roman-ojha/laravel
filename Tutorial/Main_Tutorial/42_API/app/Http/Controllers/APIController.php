@@ -60,4 +60,17 @@ class APIController extends Controller
             return ["success"=>false,"msg"=>"Some problem occur"];
         }
     }
+
+    public function deleteMethod($id = null)
+    {
+        if ($id == null) {
+            return ["success"=>false,"msg"=>"Please send Id on URL params"];
+        }
+        $deletedRes = Student::where('sid', '=', $id)->delete();
+        if ($deletedRes) {
+            return ["success"=>true,"msg"=>"Deleted Data Into database"];
+        } else {
+            return ["success"=>false,"msg"=>"Some problem occur"];
+        }
+    }
 }

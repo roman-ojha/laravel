@@ -25,3 +25,5 @@ Route::post('student/', [APIController::class,'postMethod']);
 
 // Route for PUT Method
 Route::put('student', [APIController::class,'putMethod']);
+
+Route::delete('student/{id?}', [APIController::class,'deleteMethod']);

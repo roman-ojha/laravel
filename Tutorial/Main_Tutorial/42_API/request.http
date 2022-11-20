@@ -29,3 +29,6 @@ Content-Type: application/json
     "sphone":43211234,
     "sclass":3
 }
+
+### DELETE Method API
+DELETE http://localhost:8000/api/student/0 HTTP/1.1

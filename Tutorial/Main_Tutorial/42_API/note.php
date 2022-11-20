@@ -35,5 +35,5 @@
 
         *) POST Method API
         *) PUT Method
-        *)
+        *) DELETE method
     */
