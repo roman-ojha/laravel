@@ -19,7 +19,7 @@ return new class () extends Migration {
             $table->id();
             $table->string('name');
             $table->string('address');
-            // by default laravel will create 'update_at' & 'create_at' table
+            // by default 'timestamps' will create 'update_at' & 'create_at' columns
             $table->timestamps();
         });
     }
