@@ -1,18 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
-    return view('welcome');
+    // for 'includeWhen' & 'includeUnless' directive
+    $user = "Guest";
+    $userType = $user == "Admin" ? true : false;
+
+    // for 'each' directive
+    $students = [];
+
+    return view('welcome', ['name'=>"Roman","userType"=>$userType,"students"=>$students]);
 });
+
+Route::get('/user', [UserController::class,'show']);
