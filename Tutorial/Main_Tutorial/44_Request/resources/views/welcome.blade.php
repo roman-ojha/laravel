@@ -10,11 +10,6 @@
 
 <body>
     <h1>Welcome</h1>
-    @php
-        // now here we can write plain PHP here
-        $name = 'Roman';
-        echo $name;
-    @endphp
 </body>
 
 </html>
