@@ -27,7 +27,7 @@
     <form action="/user" method="POST">
         @csrf
         {{-- creawte Normal form --}}
-        <input type="text" name="username" placeholder="Psername" />
+        <input type="text" name="username" placeholder="Username" />
         <span style="color:red;">
             {{-- we can show the error to the user specific to the filed error like this --}}
             @error('username')

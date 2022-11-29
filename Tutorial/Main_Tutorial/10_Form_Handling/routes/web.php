@@ -31,3 +31,5 @@ Route::get('/abouts', function () {
 Route::get('/{name}', function ($name) {
     return view('dynamic', ['name'=>$name]);
 });
+
+Route::view('olddata', 'olddata')->name('old');
