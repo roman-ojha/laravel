@@ -12,12 +12,14 @@ return new class () extends Migration {
      */
     public function up()
     {
+        // command to run this function
+        // php artisan migrate
         Schema::create('test', function (Blueprint $table) {
             // we can add column here
             $table->id();
             $table->string('name');
             $table->string('address');
-            // This will create 'update_at' & 'create_at' table
+            // by default laravel will create 'update_at' & 'create_at' table
             $table->timestamps();
         });
     }
@@ -29,6 +31,10 @@ return new class () extends Migration {
      */
     public function down()
     {
+        // command to run this function
+        // php artisan migrate:rollback
+
+        // this function will delete the created table using 'up' function
         Schema::dropIfExists('test');
     }
 };
