@@ -51,6 +51,8 @@
                 -> php artisan migrate --path=/database/migrations/2022_11_19_135216_create_test_table.php
         *) Migration to Drop column:
             -> EX: php artisan make:migration dropping_price_ram_from_mobile --table=mobile
+        *) Migration to create column index:
+            -> php artisan make:migration create_tid_unique_index_from_teacher --table=teachers
         *) Question
             1. How we can migrate 2 table at once
     */
