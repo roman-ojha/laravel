@@ -17,6 +17,10 @@
             -> EX:
                 -> php artisan db:seed --class=StudentsSeeder
             -> this command will seed the data into database
+        *) Use Faker Package:
+            -> use faker package to generate random valid data to insert while seeding
+            -> if you didn't get the faker package by default while installing laravel then you have to manually install it
+            -> https://github.com/fzaninotto/Faker
         *) Question:
             1. how we can seed data into database of multiple table?
     */

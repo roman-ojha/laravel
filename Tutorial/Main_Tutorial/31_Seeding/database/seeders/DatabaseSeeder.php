@@ -20,5 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        // we will add the './StudentsSeeder.php' class 'run' function to see the data into database
+        $this->call([
+            // we will call 'call' method and add list of class that we want to run when we will run the command seed
+            StudentsSeeder::class,
+        ]);
     }
 }
