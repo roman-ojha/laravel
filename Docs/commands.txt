@@ -54,6 +54,8 @@
             -> (see default 'DatabaseSeeder' Class)
         -> php artisan db:seed --class=<seeder_class_name>
             => (to seed data into database)
+    -> php artisan route:list
+        => (to see all the route available for the application)
 
 
 

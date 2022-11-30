@@ -1,6 +1,7 @@
 <?php
 
     /*
+        -> Used Files are migration file, 'Student.php' Model, 'StudentController.php', 'welcome.blade.php', 'UserController.php'
         *) What is Model
             -> Map Database table with Laravel Class Name
             -> EX:
@@ -25,9 +26,3 @@
         *) Question
             1. can we fetch two table data from one Model?
     */
-
-
-    // // by default if we will write create 'Student.php' model then it will map 'students' table
-    // // if we want to map another name table then we can do like this
-    // public $table = 'employee';
-    // // here we map 'employee' table with Student Model
