@@ -13,26 +13,47 @@
         => (to create new blade component)
     -> php artisan make:middleware <middleware_name>
         => (to create new middleware)
-    -> php artisan make:model <model_name>
-        => (to create new model)
-    -> php artisan make:migration create_<table_name>_table
-        => (to create table using migration)
-    -> php artisan migrate
-        => (to migrate table)
-    -> php artisan migrate:reset
-        => (to remove all the migrated tables)
-    -> php artisan migrate:rollback
-        => (to remove last migrated tables)
-    -> php artisan migrate:rollback --step <number_of_table>
-        => (to rollback given number of table from the last migrated table)
-    -> php artisan migrate:refresh
-        => (to first remove all migrated table and again migrate all the table, means to refresh the table)
-    -> php artisan migrate --path=/database/migrations/<filename>.php
-        => (to migrate single file table)
-    -> php artisan make:seeder <seeder_name>
-        => (to create seeder file)
-    -> php artisan db:seed --class=<seeder_class_name>
-        => (to seed data into database)
+    *) Model
+        -> php artisan make:model <model_name>
+            => (to create new model)
+        -> php artisan make:model <model_name> -migration
+        -> php artisan make:model <model_name> -m
+            => (to create new model with migration file for that model)
+        -> php artisan make:model <model_name> -factory
+        -> php artisan make:model <model_name> -f
+            => (to create new model with factory file for that model)
+        -> php artisan make:model <model_name> -seed
+        -> php artisan make:model <model_name> -s
+            => (to create new model with seed file for that model)
+        -> php artisan make:model <model_name> -controller
+        -> php artisan make:model <model_name> -c
+            => (to create new model with controller file for that model)
+        -> php artisan make:model <model_name> -mfsc
+            => (to create new model with migration, factory, seed, controller file for that model)
+    *) Migration
+        -> php artisan make:migration create_<table_name>_table
+            => (to create table using migration)
+        -> php artisan migrate
+            => (to migrate table)
+        -> php artisan migrate:reset
+            => (to remove all the migrated tables)
+        -> php artisan migrate:rollback
+            => (to remove last migrated tables)
+        -> php artisan migrate:rollback --step <number_of_table>
+            => (to rollback given number of table from the last migrated table)
+        -> php artisan migrate:refresh
+            => (to first remove all migrated table and again migrate all the table, means to refresh the table)
+        -> php artisan migrate:status
+            => (to see the status of all migration)
+        -> php artisan migrate --path=/database/migrations/<filename>.php
+            => (to migrate single file table)
+    *) Seeding
+        -> php artisan make:seeder <seeder_name>
+            => (to create seeder file)
+        -> php artisan db:seed <seeder_name>
+            -> (see default 'DatabaseSeeder' Class)
+        -> php artisan db:seed --class=<seeder_class_name>
+            => (to seed data into database)
 
 
 

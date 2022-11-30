@@ -54,7 +54,6 @@ class StudentsSeeder extends Seeder
         // Using Faker package
         // first we will create a fake data
         $faker = Faker::create();
-        error_log($faker->phoneNumber());
         DB::table('students')->insert([
             'sname'=>$faker->name(),
             'saddress'=>$faker->address(),

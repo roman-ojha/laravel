@@ -1,6 +1,7 @@
 <?php
 
     /*
+        -> Used files are on './database/migrations'
         *) What is Migration
             -> Using Migration we can generate Database table Dynamically with laravel code
             -> We don't need to create the Database Table Manually
