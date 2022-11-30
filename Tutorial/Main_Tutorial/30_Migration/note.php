@@ -53,6 +53,11 @@
             -> EX: php artisan make:migration dropping_price_ram_from_mobile --table=mobile
         *) Migration to create column index:
             -> php artisan make:migration create_tid_unique_index_from_teacher --table=teachers
+        *) Migration to Drop column index:
+            -> php artisan make:migration drop_tid_unique_index_from_teachers --table=teachers
+        *) Migration to add foreign key:
+            -> create different migration file to add foreign key constraint rather then adding it while creating the table because in future we can remove that foreign key constraint using that migration file
+            ->
         *) Question
             1. How we can migrate 2 table at once
     */

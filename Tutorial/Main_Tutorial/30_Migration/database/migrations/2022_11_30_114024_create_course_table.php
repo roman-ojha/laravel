@@ -12,9 +12,11 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::table('teachers', function (Blueprint $table) {
-            // here we will make 'tid' column as unique
-            $table->unique('tid');
+        // We had created course to see example of Foreign key
+        Schema::create('course', function (Blueprint $table) {
+            $table->id();
+            $table->string('course_name');
+            $table->timestamps();
         });
     }
 
@@ -25,9 +27,6 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::table('teachers', function (Blueprint $table) {
-            // on down function we will drop the unique index that we create on 'up' function
-            $table->dropUnique(['tid']);
-        });
+        Schema::dropIfExists('course');
     }
 };

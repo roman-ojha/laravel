@@ -13,8 +13,8 @@ return new class () extends Migration {
     public function up()
     {
         Schema::table('teachers', function (Blueprint $table) {
-            // here we will make 'tid' column as unique
-            $table->unique('tid');
+            // here we will drop unique index of 'tid' column
+            $table->dropUnique(['tid']);
         });
     }
 
@@ -26,8 +26,8 @@ return new class () extends Migration {
     public function down()
     {
         Schema::table('teachers', function (Blueprint $table) {
-            // on down function we will drop the unique index that we create on 'up' function
-            $table->dropUnique(['tid']);
+            // we will rollback and add unique constraint on 'tid'
+            $table->unique('tid');
         });
     }
 };
