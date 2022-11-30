@@ -49,6 +49,8 @@
             -> php artisan migrate --path=/database/migrations/<filename>.php
             -> EX:
                 -> php artisan migrate --path=/database/migrations/2022_11_19_135216_create_test_table.php
+        *) Migration to Drop column:
+            -> EX: php artisan make:migration dropping_price_ram_from_mobile --table=mobile
         *) Question
             1. How we can migrate 2 table at once
     */
