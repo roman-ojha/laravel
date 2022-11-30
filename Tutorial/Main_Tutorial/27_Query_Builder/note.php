@@ -4,7 +4,7 @@
         => To connect to the database and query into it there is 2 way to do it:
             1. QueryBuilder
                 -> we use normal function with database classes
-            2. Model
+            2. Model & Eloquent ORM
         *) Get Result With Table Name
         *) Where Condition
         *) Find, Count
