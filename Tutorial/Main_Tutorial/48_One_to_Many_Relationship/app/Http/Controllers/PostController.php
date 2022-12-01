@@ -20,4 +20,11 @@ class PostController extends Controller
         // now we will save the post data base on the author that we get on $id
         $author->post()->save($post);
     }
+
+    // Get post base on Author Id
+    public function show_post($id)
+    {
+        $post = Author::find($id)->post;
+        return $post;
+    }
 }
