@@ -33,6 +33,7 @@ class CustomerController extends Controller
 
         $mobile = Customer::find($id)->mobile;
 
-        return $mobile;
+        // return $mobile;
+        return view('mobile', ['mobile'=>$mobile]);
     }
 }
