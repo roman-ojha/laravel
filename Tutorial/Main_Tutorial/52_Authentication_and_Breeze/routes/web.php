@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// User defined Route
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/show-user', [IndexController::class,'show_auth_user']);
+Route::get('/is-auth', [IndexController::class,'is_authenticated']);
+
+// Adding Middleware
+// These route can only be able to access by Authenticated user
+Route::get('/report', function () {
+    return "Report";
+})->middleware('auth');
+
+// ==================
 
 Route::get('/dashboard', function () {
     return view('dashboard');
