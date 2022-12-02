@@ -5,5 +5,5 @@
         -> php artisan make:model Language -mc
         -> php artisan make:model Deployment -mc
 
-        -> Used files are Migrations files, 'Car.php' Model, 'Mechanic.php' Model, 'Owner.php' Model, 'MechanicController.php', 'CarController.php', 'OwnerController.php', 'web.php' Route
+        -> Used files are Migrations files, 'Project.php' Model, 'Language.php' Model, 'Deployment.php' Model, 'ProjectController.php', 'LanguageController.php', 'DeploymentController.php', 'web.php' Route
     */
