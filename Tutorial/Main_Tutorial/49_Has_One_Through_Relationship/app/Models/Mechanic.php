@@ -17,6 +17,8 @@ class Mechanic extends Model
 
     public function owner()
     {
+        // this will create a relation with Owner model
+        // Mechanic -> Car -> Owner
         return $this->hasOneThrough(Owner::class, Car::class);
     }
 }

@@ -12,6 +12,6 @@ class Car extends Model
     public function owner()
     {
         // creating one to one relations with owner
-        return $this->hasOne(Car::class);
+        return $this->hasOne(Owner::class);
     }
 }
