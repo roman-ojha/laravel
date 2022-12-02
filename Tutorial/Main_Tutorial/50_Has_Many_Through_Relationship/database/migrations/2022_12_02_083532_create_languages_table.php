@@ -15,9 +15,9 @@ return new class () extends Migration {
         Schema::create('languages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            // $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('project_id');
             // creating foreign keo project_id for Project Model
-            // $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('project_id')->references('id')->on('projects');
             $table->timestamps();
         });
     }
