@@ -1,10 +1,21 @@
-{{-- Using Layout --}}
+{{-- extending/using layout --}}
+@extends('layout.admin')
 
-<x-layout.main>
-    {{-- named title --}}
-    <x-slot name="title">Contact</x-slot>
-    <x-slot name="banner">From Contact</x-slot>
+{{-- providing the data using @section --}}
+{{-- title --}}
+@section('title', 'contact')
+{{-- @section('<name>', '<value>') --}}
 
-    {{-- slot --}}
-    <h1>Contact Page</h1>
-</x-layout.main>
+
+{{-- providing whole views/html code inside section --}}
+@section('page-name')
+    <h1>Contact page</h1>
+@endsection
+
+@section('banner')
+    <h1>Contact page banner</h1>
+@endsection
+
+@section('main')
+    <h1>Contact page Main</h1>
+@endsection
