@@ -11,8 +11,15 @@
 <body>
     <h1>Welcome Page</h1>
 
-    {{-- Rendering anonymous component --}}
-    <x-card title="Hello" subTitle="world" description="Description" />
+    <x-alert>
+        {{-- adding slot inside component --}}
+        <h3>From Slot</h3>
+
+        {{-- named slot --}}
+        <x-slot name="title">
+            <h3>Named Slot</h3>
+        </x-slot>
+    </x-alert>
 </body>
 
 </html>
