@@ -31,4 +31,10 @@ class Card extends Component
     {
         return view('components.card');
     }
+
+    // Component Method
+    public function addNumber($a, $b)
+    {
+        return $a+$b;
+    }
 }
