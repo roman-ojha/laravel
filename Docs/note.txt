@@ -1,5 +1,6 @@
 *) Different way to print or log some data:
     -> echo
+    -> print()
     -> print_r() (for array data structure)
     -> dd()
     -> error_log() (to print on console)
