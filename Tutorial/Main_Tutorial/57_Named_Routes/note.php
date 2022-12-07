@@ -1,6 +1,5 @@
 <?php
 
     /*
-        *) Component based layout:
-            -> php artisan make:component layout/main
+        => Used files are 'home.blade.php', 'about.blade.php', 'web.php'
     */

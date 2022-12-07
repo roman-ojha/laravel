@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <h1>Home Page</h1>
-
+    <h1>About Page</h1>
     <ul>
         <li>
             {{-- using 'route' method to redirect using named route --}}
@@ -24,7 +23,8 @@
             <a href="{{ route('redirect', ['page' => 'home']) }}">Home</a>
         </li>
         <li>
-            <a href="{{ route('redirect', ['page' => 'about']) }}">About</a>
+            {{-- we know that 'page' exist on dynamic url value but 'pg' did not exist in that case it will make that as query string --}}
+            <a href="{{ route('redirect', ['page' => 'about', 'pg' => 3]) }}">About</a>
             {{-- http://localhost:8000/redirect/about?pg=3 --}}
         </li>
     </ul>
