@@ -1,19 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
+use App\Http\Controllers\EmployeeController;
 
 Route::get('/', function () {
-    $string = "hello world";
-    // Normal way to do operation to string
-    echo Str::ucfirst($string)."<br/>";
-    // 'ucfirst': make first letter capital
-    echo Str::replaceFirst("hello", "hi", $string)."<br/>";
-    // output: hi World
-    echo Str::camel($string)."<br/>";
-    // Output: helloWorld
-
-    // Using Fluent String:
-    echo Str::of($string)->replaceFirst("hello", 'hi', $string)->camel($string)->ucfirst($string)."<br/>";
-    // Output: HiWorld
+    return view('home');
 });
+
+// get model data with id
+// Route::get('/device/{key}', [EmployeeController::class,'index']);
+
+// get model data with name
+// {key:<model_field_name>}
+Route::get('/device/{key:sname}', [EmployeeController::class,'index']);
+// return : {"sid":11,"sname":"Razz","saddress":"nepal","sclass":3,"sphone":"898743212"}
