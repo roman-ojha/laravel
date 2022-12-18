@@ -20,4 +20,6 @@
         -> in that case we can specify into 'prefix' method and then we can also specify the base file path for that api routes
 
 *) Step:
-    -> php artisan make:model Student -msc
+    -> php artisan make:model Student -ms
+    -> php artisan make:controller StudentController --resource
+    -> add file on 'Student' table on migration file
