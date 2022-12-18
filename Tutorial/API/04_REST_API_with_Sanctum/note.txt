@@ -18,3 +18,6 @@
     -> Sometimes we want multiple root api url path:
         -> EX: '/api/v1', '/api/v2'
         -> in that case we can specify into 'prefix' method and then we can also specify the base file path for that api routes
+
+*) Step:
+    -> php artisan make:model Student -msc
