@@ -1,1 +1,20 @@
 => Docs: https://laravel.com/docs/9.x/sanctum
+
+=> we will use './routes/api.php' to use REST API
+
+*) To change the prefix '/api' for api url:
+    -> in that case we have to go to './app/Providers/RouteServiceProvider.php':
+    -> and change the prefix method on api route:
+        public function boot()
+        {
+            $this->routes(function () {
+                Route::middleware('api')
+                    ->prefix('<custom_prefix_for_api_route>')
+                    ->group(base_path('routes/api.php'));
+            });
+        }
+    -> or also we can just remove the prefix method if you want to use api route from '/'
+    -> NOTE: if you have the route for api on '/' and route for web app on '/' then web app route have higher priority
+    -> Sometimes we want multiple root api url path:
+        -> EX: '/api/v1', '/api/v2'
+        -> in that case we can specify into 'prefix' method and then we can also specify the base file path for that api routes
