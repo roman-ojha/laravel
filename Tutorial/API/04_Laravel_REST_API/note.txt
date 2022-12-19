@@ -23,3 +23,5 @@
     -> php artisan make:model Student -ms
     -> php artisan make:controller StudentController --resource
     -> add file on 'Student' table on migration file
+    -> use './routes/api.php' to create route
+    -> use './app/Http/Controllers/StudentController.php' for controller
