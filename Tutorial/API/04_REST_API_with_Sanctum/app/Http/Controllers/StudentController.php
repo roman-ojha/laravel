@@ -91,6 +91,18 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Student::find($id)->delete();
+    }
+
+
+    /**
+     * Search the specified resource based on City.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function search($city)
+    {
+        return Student::where('city', $city)->get();
     }
 }
