@@ -1,2 +1,26 @@
-# Test
-GET http://localhost:8000/api/students
+### GET all students
+GET http://localhost:8000/api/students HTTP/1.1
+
+
+### GET specific student
+GET http://localhost:8000/api/students/1 HTTP/1.1
+
+### create new students data
+POST http://localhost:8000/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Roman",
+    "city": "Kathmandu",
+    "fees": 431.32
+}
+
+### update all the data so use PUT
+PUT http://localhost:8000/api/students/12 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Razz",
+    "city": "Pokhara",
+    "fees": 4564.2
+}

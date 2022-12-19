@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class StudentController extends Controller
 {
@@ -13,7 +15,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return Student::all();
     }
 
     /**
@@ -23,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        // on this function we can create the new data but the data should come from form
     }
 
     /**
@@ -34,7 +36,14 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        error_log("hello");
+        // create new data
+        $request->validate([
+            'name' => 'required',
+            'city' => 'required',
+            'fees' => 'required',
+        ]);
+        return Student::create($request->all());
     }
 
     /**
@@ -45,7 +54,7 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        return Student::find($id);
     }
 
     /**
@@ -68,7 +77,10 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        error_log($id);
+        $student = Student::find($id);
+        $student->update($request->all());
+        return $student;
     }
 
     /**
