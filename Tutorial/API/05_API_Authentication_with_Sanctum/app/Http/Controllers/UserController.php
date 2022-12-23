@@ -74,7 +74,7 @@ class UserController extends Controller
             error_log($token);
 
             return response([
-                'message'=>'Login Successfully Successfully',
+                'message'=>'Login Successfully',
                 'status'=>'success',
                 'token'=>$token
             ], 200);
@@ -85,5 +85,18 @@ class UserController extends Controller
             'message'=>"Email & Password doesn't match with user credential",
             'status'=>'fail'
         ], 401);
+    }
+
+    public function logout(Request $request)
+    {
+        // This function will logout the logged user
+        // it means that it will remove the token create for the user in the database
+
+        // so we will delete all the token create for that auth user
+        auth()->user()->tokens()->delete();
+        return response([
+                'message'=>'Logout Successfully',
+                'status'=>'success',
+            ], 200);
     }
 }

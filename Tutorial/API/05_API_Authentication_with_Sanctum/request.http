@@ -20,3 +20,8 @@ Accept: application/json
     "email":"roman@gmail.com",
     "password":"romanojha"
 }
+
+### Api to logout the user
+POST http://localhost:8000/api/logout
+Accept : application/json
+Authorization: Bearer 3|R1p6owFZWhlPgsqmCzCejYMUolcJKBxy9JZRn2ih
