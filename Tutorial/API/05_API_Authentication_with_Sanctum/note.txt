@@ -1,0 +1,4 @@
+=> we already got migrations to create user, password, failed_jobs, personal_access_token
+=> as well as Model for 'User' is create so we don't have to create it by ourself
+*) Steps:
+    => create a 'UserController'
