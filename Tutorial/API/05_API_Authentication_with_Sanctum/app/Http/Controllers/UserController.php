@@ -55,4 +55,35 @@ class UserController extends Controller
             'status'=>'fail'
         ], 500);
     }
+
+    public function login(Request $request)
+    {
+        // Function that will authenticate user and access Protected route to get access
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required',
+        ]);
+
+
+        $user = User::where('email', $request->email)->first();
+        // Now we will check doest the given password by the user match with the database
+        // we can use authenticate function as well to perform this task but we will do it manually
+        if ($user && Hash::check($request->password, $user->password)) {
+            // if User exist and password get match then we will generate new token
+            $token = $user->createToken($request->email)->plainTextToken;
+            error_log($token);
+
+            return response([
+                'message'=>'Login Successfully Successfully',
+                'status'=>'success',
+                'token'=>$token
+            ], 200);
+        }
+
+        // If user & password doesn't match then user can't logged in
+        return response([
+            'message'=>"Email & Password doesn't match with user credential",
+            'status'=>'fail'
+        ], 401);
+    }
 }

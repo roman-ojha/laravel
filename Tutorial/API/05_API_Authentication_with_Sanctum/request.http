@@ -10,3 +10,13 @@ Accept: application/json
     "password_confirmation":"romanojha",
     "tc": "true"
 }
+
+### Api to login the user
+POST http://localhost:8000/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email":"roman@gmail.com",
+    "password":"romanojha"
+}

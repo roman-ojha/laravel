@@ -9,4 +9,7 @@ use App\Http\Controllers\UserController;
 // Route to register the new user
 Route::post('/register', [UserController::class,'register']);
 
+// Route to login the user
+Route::post('/login', [UserController::class,'login']);
+
 // Protected Route: need to authenticate =======
