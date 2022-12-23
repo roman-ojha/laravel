@@ -21,4 +21,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // Route to get the logged user data
     Route::get('/get-user', [UserController::class,'logged_user']);
+
+    // Route to change uer password
+    Route::post('/changepassword', [UserController::class,'changePassword']);
 });

@@ -100,6 +100,7 @@ class UserController extends Controller
             ], 200);
     }
 
+    // For Protected Route
     public function logged_user()
     {
         // Function that will return logged/authenticated user
@@ -111,5 +112,30 @@ class UserController extends Controller
             "status"=>'success',
             "user"=>$loggedUser,
         ]);
+    }
+
+    // For Protected Route
+    public function changePassword(Request $request)
+    {
+        // Function that will change pass of logged/authenticated user
+
+        // first we will validate the password
+        $request->validate([
+            'password'=>'required|confirmed',
+        ]);
+
+        // Getting authenticated logged user
+        $loggedUser = auth()->user();
+
+        // First we will Hash the password and then update it
+        $loggedUser->password = Hash::make($request->password);
+
+        // save logged User
+        $loggedUser->save();
+
+        return response([
+            "message"=>"Password change successfully",
+            "status"=>'success',
+        ], 200);
     }
 }

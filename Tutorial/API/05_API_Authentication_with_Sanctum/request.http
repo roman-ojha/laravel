@@ -18,15 +18,27 @@ Accept: application/json
 
 {
     "email":"roman@gmail.com",
-    "password":"romanojha"
+    "password":"razzroman"
 }
 
 ### Api to logout the user
 POST http://localhost:8000/api/logout
 Accept : application/json
-Authorization: Bearer 3|R1p6owFZWhlPgsqmCzCejYMUolcJKBxy9JZRn2ih
+Authorization: Bearer 5|CUNgtx4a10MrBZTyqqzfne0TIRrNEebQyQyA842G
 
 ### Api to get user data
 GET http://localhost:8000/api/get-user
 Accept : application/json
-Authorization: Bearer 4|vDd1n9bDQEfKpjoZWyDuHZm7mWNjiKu87OEVIs5Z
+Authorization: Bearer 5|CUNgtx4a10MrBZTyqqzfne0TIRrNEebQyQyA842G
+
+
+### Api to change user password
+POST http://localhost:8000/api/changepassword
+Content-Type: application/json
+Accept : application/json
+Authorization: Bearer 5|CUNgtx4a10MrBZTyqqzfne0TIRrNEebQyQyA842G
+
+{
+    "password":"razzroman",
+    "password_confirmation":"razzroman"
+}
