@@ -38,10 +38,16 @@ class UserController extends Controller
             'tc'=>json_decode($request->tc),
         ]);
 
+        // After creating the user we will create a new token for that user to get authenticated
+        // This authentication is done using Sanctum
+        $token = $user->createToken($request->email)->plainTextToken;
+        error_log($token);
+
         if ($user) {
             return response([
                 'message'=>'Registration Successfully',
-                'status'=>'success'
+                'status'=>'success',
+                'token'=>$token
             ], 201);
         }
         return response([

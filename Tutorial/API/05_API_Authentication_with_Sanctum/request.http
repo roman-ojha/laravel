@@ -1,0 +1,12 @@
+### Create new user
+POST http://localhost:8000/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Roman Ojha",
+    "email": "roman@gmail.com",
+    "password": "romanojha",
+    "password_confirmation":"romanojha",
+    "tc": "true"
+}
