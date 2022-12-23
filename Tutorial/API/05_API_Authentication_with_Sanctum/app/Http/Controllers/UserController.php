@@ -99,4 +99,17 @@ class UserController extends Controller
                 'status'=>'success',
             ], 200);
     }
+
+    public function logged_user()
+    {
+        // Function that will return logged/authenticated user
+
+        $loggedUser = auth()->user();
+
+        return response([
+            "message"=>"Logged user data",
+            "status"=>'success',
+            "user"=>$loggedUser,
+        ]);
+    }
 }

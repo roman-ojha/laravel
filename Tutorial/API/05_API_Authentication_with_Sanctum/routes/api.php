@@ -18,4 +18,7 @@ Route::post('/login', [UserController::class,'login']);
 Route::middleware(['auth:sanctum'])->group(function () {
     // Route to logout user using token
     Route::post('/logout', [UserController::class,'logout']);
+
+    // Route to get the logged user data
+    Route::get('/get-user', [UserController::class,'logged_user']);
 });

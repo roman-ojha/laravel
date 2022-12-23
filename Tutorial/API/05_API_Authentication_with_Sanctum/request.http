@@ -25,3 +25,8 @@ Accept: application/json
 POST http://localhost:8000/api/logout
 Accept : application/json
 Authorization: Bearer 3|R1p6owFZWhlPgsqmCzCejYMUolcJKBxy9JZRn2ih
+
+### Api to get user data
+GET http://localhost:8000/api/get-user
+Accept : application/json
+Authorization: Bearer 4|vDd1n9bDQEfKpjoZWyDuHZm7mWNjiKu87OEVIs5Z
