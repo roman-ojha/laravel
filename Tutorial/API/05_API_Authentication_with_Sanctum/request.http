@@ -53,11 +53,11 @@ Accept: application/json
 }
 
 ### API to reset the password
-POST http://127.0.0.1:8000/api/reset-password/lWSOW3cG8JD4xwKPHwl9Cn4yUpPc4YGjlat0h3rQyRvln4m4TimLPomynn8i
+POST http://127.0.0.1:8000/api/reset-password/CLzNFqgrccSWQHQyDJ21kXIFvspZtiKxzlIM8EzS3J1S3O8oyXEeKU6uFzxx
 Content-Type: application/json
 Accept: application/json
 
 {
-    "password": "razzroman",
-    "password_confirmation":"razzroman"
+    "password": "romanojha",
+    "password_confirmation":"romanojha"
 }

@@ -21,3 +21,9 @@
     -> After that it will send a url to the email Url look like:
         -> http://127.0.0.1:8000/api/reset/R8rgGYdq0uCIsij63BzZhorfcp9a00okm9rvY368PNRvkoUnTNHKgQl1xg5K
     -> Now we will use this url from 'postman' or some other service to send request by passing new password
+
+*) Cors:
+    -> If you will connect you laravel api with frontend in that case you might get face with cors policy error
+    -> to solve this problem you have to go to './config/cors.php'
+    -> inside that file you have to true 'supports_credentials' property
+    -> 'supports_credentials' => true,
