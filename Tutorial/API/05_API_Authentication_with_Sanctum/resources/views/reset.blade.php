@@ -10,7 +10,9 @@
 
 <body>
     <h1>Reset Password for Laravel API Auth Tut</h1>
-    <h2>URL: <a href="http://127.0.0.1:3000/api/reset/{{ $token }}"></a></h2>
+    <h2>URL: <a
+            href="http://127.0.0.1:3000/api/reset/{{ $token }}">http://127.0.0.1:3000/api/reset/{{ $token }}</a>
+    </h2>
 </body>
 
 </html>!

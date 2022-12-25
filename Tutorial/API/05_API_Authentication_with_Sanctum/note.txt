@@ -9,3 +9,4 @@
     -> now we will edit some stuff inside 'PasswordReset' Model
     -> to send password reset url into user email we have to first configure the admin email for that we have to put some environment variable inside '.env' file
     -> also we will create a View that contain the password reset UI which will get send to email of that user
+    -> https://stackoverflow.com/questions/72621214/laravel-sending-email-with-gmail-after-less-secure-app-option-no-longer-suppo

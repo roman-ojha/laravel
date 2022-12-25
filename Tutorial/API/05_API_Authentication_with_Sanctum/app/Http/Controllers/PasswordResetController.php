@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Error;
 
 class PasswordResetController extends Controller
 {
@@ -21,9 +22,10 @@ class PasswordResetController extends Controller
         $request->validate([
             'email'=>'required|email',
         ]);
+        $email = $request->email;
 
         // Now we will check does the user exist or not with the given email
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $email)->first();
         if (!$user) {
             return response([
                 'message'=>'Email doest not exist',
@@ -37,17 +39,23 @@ class PasswordResetController extends Controller
 
         // now here we will save data into password reset table
         PasswordReset::create([
-            'email' => $request->email,
+            'email' => $email,
             'token'=> $token,
             'created_at'=> Carbon::now()
         ]);
 
         // Create url link that will get send to the user email
-        $url ="http://127.0.0.1:3000/api/reset/".$token;
+        $url ="http://127.0.0.1:8000/api/reset/".$token;
         error_log("URL: ".$url);
 
         // Sending password reset url into Gmail
-        // Main::send('');
+        // Mail::send('<view_which_you_want_to_send_on_email','<data_to_pass_on_view_template>')
+        Mail::send('reset', ['token'=>$token], function (Message $message) use ($email) {
+            $message->subject("Reset Your Password");
+            // on which email you want to send url
+            $message->to($email);
+        });
+
 
 
         // After sending the email we will response to the user

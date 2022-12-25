@@ -1,5 +1,7 @@
 <?php
 
+use function Symfony\Component\String\u;
+
 return [
 
     /*
@@ -114,5 +116,4 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
-
 ];
