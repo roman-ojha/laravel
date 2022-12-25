@@ -45,7 +45,7 @@ class PasswordResetController extends Controller
         ]);
 
         // Create url link that will get send to the user email
-        $url ="http://127.0.0.1:8000/api/reset/".$token;
+        $url ="http://127.0.0.1:8000/api/reset-password/".$token;
         error_log("URL: ".$url);
 
         // Sending password reset url into Gmail
@@ -63,5 +63,42 @@ class PasswordResetController extends Controller
             'message'=>'Password Reset Email Sent... Check Your Email',
             'status'=>'success',
         ], 200);
+    }
+
+    public function reset(Request $request, $token)
+    {
+        // function that will reset the password from the token and new password provided
+        error_log($request->password, $request->conformation_password);
+
+        // First we will validate the password
+        $request->validate([
+            'password'=>'required|confirmed',
+        ]);
+
+        // now we will identify the user from the given token
+        $passwordReset = PasswordReset::where('token', $token)->first();
+
+        if (!$passwordReset) {
+            // User didn't get found
+            return response([
+                'message'=>"Token is Invalid or Expired",
+                'status'=>'failed',
+            ], 404);
+        }
+
+        // Now we will get the user from email exist on '$passwordReset
+        $user = User::where('email', $passwordReset->email)->first();
+
+        // Now we will change the password
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        // Delete the token after resseting password
+        PasswordReset::where('email', $user->email)->delete();
+
+        return response([
+            'message'=>'Password Reset Successfully',
+            'status'=>'success'
+        ]);
     }
 }

@@ -49,5 +49,15 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "email":"razzroman99@gmail.com"
+    "email":"roman@gmail.com"
+}
+
+### API to reset the password
+POST http://127.0.0.1:8000/api/reset-password/lWSOW3cG8JD4xwKPHwl9Cn4yUpPc4YGjlat0h3rQyRvln4m4TimLPomynn8i
+Content-Type: application/json
+Accept: application/json
+
+{
+    "password": "razzroman",
+    "password_confirmation":"razzroman"
 }

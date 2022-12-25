@@ -10,3 +10,14 @@
     -> to send password reset url into user email we have to first configure the admin email for that we have to put some environment variable inside '.env' file
     -> also we will create a View that contain the password reset UI which will get send to email of that user
     -> https://stackoverflow.com/questions/72621214/laravel-sending-email-with-gmail-after-less-secure-app-option-no-longer-suppo
+        MAIL_MAILER=smtp
+        MAIL_HOST=smtp.gmail.com
+        MAIL_PORT=465
+        MAIL_USERNAME=<username>@gmail.com
+        MAIL_PASSWORD=<password>
+        MAIL_ENCRYPTION=tls
+        MAIL_FROM_ADDRESS="<username>@gmail.com"
+        MAIL_FROM_NAME="${APP_NAME}"
+    -> After that it will send a url to the email Url look like:
+        -> http://127.0.0.1:8000/api/reset/R8rgGYdq0uCIsij63BzZhorfcp9a00okm9rvY368PNRvkoUnTNHKgQl1xg5K
+    -> Now we will use this url from 'postman' or some other service to send request by passing new password
