@@ -2,3 +2,7 @@
 => as well as Model for 'User' is create so we don't have to create it by ourself
 *) Steps:
     => create a 'UserController'
+
+*) Password reset
+    -> for password reset we will send email to reset the password
+    -> php artisan make:model PasswordReset -c

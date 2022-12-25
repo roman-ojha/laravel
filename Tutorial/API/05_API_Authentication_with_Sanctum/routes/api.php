@@ -12,9 +12,11 @@ Route::post('/register', [UserController::class,'register']);
 // Route to login the user
 Route::post('/login', [UserController::class,'login']);
 
+// Route to reset the password
+
+
 
 // Protected Route: need to authenticate =======
-
 Route::middleware(['auth:sanctum'])->group(function () {
     // Route to logout user using token
     Route::post('/logout', [UserController::class,'logout']);
