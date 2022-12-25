@@ -43,9 +43,11 @@ class PasswordResetController extends Controller
         ]);
 
         // Create url link that will get send to the user email
-        dump("http://127.0.0.1:3000/api/reset/".$token);
+        $url ="http://127.0.0.1:3000/api/reset/".$token;
+        error_log("URL: ".$url);
 
-        // Sending Email with password reset View
+        // Sending password reset url into Gmail
+        // Main::send('');
 
 
         // After sending the email we will response to the user

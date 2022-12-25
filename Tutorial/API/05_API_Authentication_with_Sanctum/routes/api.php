@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PasswordResetController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -14,6 +15,7 @@ Route::post('/login', [UserController::class,'login']);
 
 // Routes to reset the password:
 // Route to send reset password url on email
+Route::post('/send-reset-password-email', [PasswordResetController::class,'send_reset_password_email']);
 
 
 

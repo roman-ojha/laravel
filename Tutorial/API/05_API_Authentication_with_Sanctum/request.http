@@ -42,3 +42,12 @@ Authorization: Bearer 5|CUNgtx4a10MrBZTyqqzfne0TIRrNEebQyQyA842G
     "password":"razzroman",
     "password_confirmation":"razzroman"
 }
+
+### Api to send password reset link to email
+POST http://localhost:8000/api/send-reset-password-email
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email":"razzroman99@gmail.com"
+}
