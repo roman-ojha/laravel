@@ -6,3 +6,5 @@
 *) Password reset
     -> for password reset we will send email to reset the password
     -> php artisan make:model PasswordReset -c
+    -> now we will edit some stuff inside 'PasswordReset' Model
+    -> 

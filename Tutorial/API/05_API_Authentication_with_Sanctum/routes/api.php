@@ -12,7 +12,8 @@ Route::post('/register', [UserController::class,'register']);
 // Route to login the user
 Route::post('/login', [UserController::class,'login']);
 
-// Route to reset the password
+// Routes to reset the password:
+// Route to send reset password url on email
 
 
 
