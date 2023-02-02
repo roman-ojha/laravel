@@ -1,0 +1,3 @@
+[submodule "Project/school_management_system"]
+	path = Project/school_management_system
+	url = git@github.com:roman-ojha/laravel-school-management-system.git
