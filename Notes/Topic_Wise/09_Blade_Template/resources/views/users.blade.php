@@ -69,6 +69,11 @@
 
     {{-- PHP in JS --}}
     {{-- her we have to use '@json(<variable_name>)' --}}
+
+    {{-- Check if data exist or not --}}
+    @if (!empty($username))
+        <h1>Username Exist</h1>
+    @endif
     <script>
         var data = @json($username);
         console.log(data);
