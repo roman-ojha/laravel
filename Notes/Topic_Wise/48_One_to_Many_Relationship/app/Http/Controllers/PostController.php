@@ -27,4 +27,19 @@ class PostController extends Controller
         $post = Author::find($id)->post;
         return $post;
     }
+
+    public function get_posts()
+    {
+        // get all posts with specific author
+        $post = Post::with('author')->get();
+
+        // with selected specific column
+        Post::select('id', 'title', 'cat', 'author_id')->with('author')->get();
+
+        // with nested specific field
+        Post::select('id', 'title', 'cat', 'author_id')->with(['author'=>function ($q) {
+            $q->select('id', 'username');
+        }])->get();
+        return $post;
+    }
 }
