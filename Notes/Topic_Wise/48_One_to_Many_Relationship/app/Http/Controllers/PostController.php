@@ -25,6 +25,10 @@ class PostController extends Controller
     public function show_post($id)
     {
         $post = Author::find($id)->post;
+        // another way
+        $post = Author::where('id', $id)->select('id')->with(['author' => function ($q) {
+            $q->select('id', 'username');
+        }]);
         return $post;
     }
 
@@ -34,12 +38,13 @@ class PostController extends Controller
         $post = Post::with('author')->get();
 
         // with selected specific column
-        Post::select('id', 'title', 'cat', 'author_id')->with('author')->get();
+        Post::select(['id', 'title', 'cat', 'author_id'])->with('author')->get();
 
         // with nested specific field
-        Post::select('id', 'title', 'cat', 'author_id')->with(['author'=>function ($q) {
+        Post::select('id', 'title', 'cat', 'author_id')->with(['author' => function ($q) {
             $q->select('id', 'username');
         }])->get();
+
         return $post;
     }
 }

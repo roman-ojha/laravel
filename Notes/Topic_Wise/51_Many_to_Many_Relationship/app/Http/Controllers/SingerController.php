@@ -18,13 +18,16 @@ class SingerController extends Controller
 
         // after that we have to mention which song is sing by whom
         // list of Song id that singer 'Roman' sang
-        $songIds = [1,2];
+        $songIds = [1, 2];
         $singer->songs()->attach($songIds);
         // attach function will attach an all the Song id that is sign by the '$singer' instance
         // so now it will add new data into 'singer_songs'
 
         // if you want to remove or detach the Song that is Sing by the Singer then we will use this
         // $singer->songs()->detach($songIds);
+
+        // to update
+        // $singer->song()->sync($songIds);
     }
 
     // function to get singer data base on Song id
