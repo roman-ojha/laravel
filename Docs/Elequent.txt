@@ -1,0 +1,9 @@
+*) get all data what aren't a given set of data
+    -> Book::whereNotIn('id', [4, 5, 6])->get() 
+
+*) getting all the record that doesn't exist in another table record
+        $books = Book::select(['id', 'name'])->with(['library' => function ($q) {
+            $q->select('id', 'book_id');
+        }])->whereDoesntHave('library')->get();
+        
+        -> Here first we get all the books with library after we get the library field we will check where library is null in that case we will get the data
