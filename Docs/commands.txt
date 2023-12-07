@@ -13,6 +13,8 @@
         => (to create new blade component)
     -> php artisan make:middleware <middleware_name>
         => (to create new middleware)
+    -> php artisan serve --host=127.0.0.1 --port=<port>
+    -> php artisan serve --env=dev (run env file from '.env.dev')
     *) Model
         -> php artisan make:model <model_name>
             => (to create new model)

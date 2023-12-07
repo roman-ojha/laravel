@@ -1,0 +1,4 @@
+*) Change server port and host:
+    -> put bellow on env file:
+    SERVER_PORT=8005
+    SERVER_HOST=127.0.0.1
